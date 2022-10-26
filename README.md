@@ -14,4 +14,10 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Websites used for reference:
+
+To get the most frequent value:
+https://stackoverflow.com/questions/15138973/how-to-get-the-number-of-the-most-frequent-value-in-a-column
+
+how to use DataFrame.iloc to display 5 rows of raw data at a time based on user input:
+https://stackoverflow.com/questions/60697736/how-do-i-repeat-an-iteration-across-a-pandas-data-frame
