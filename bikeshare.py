@@ -23,6 +23,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = ''
+    # while loop takes user input and converts it to lowercase strings so we can compare with our list to catch invalid inputs
     while True:
         city = str(input('\nEnter Chicago, New York City or Washington: ')).lower()
         if city in CITY_DATA:
@@ -31,6 +32,7 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june)
             #month = str(input('Please enter the month you would like analyze: January, February, March, April, May or June'))
     month = ''
+    # while loop takes user input and converts it to lowercase strings so we can compare with our list to catch invalid inputs
     while True:
         month = str(input('\nWhich month you would like analyze: January, February, March, April, May or June or ALL to apply no filter:')).lower()
         if month in months:
@@ -39,6 +41,7 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
             #day = str(input('Would you like to analyze Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday?'))
     day = ''
+    # while loop takes user input and converts it to lowercase strings so we can compare with our list to catch invalid inputs
     while True:
         day = str(input('\nWould you like to analyze Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday or ALL to apply no filter:')).lower()
         if day in days:
