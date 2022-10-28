@@ -3,9 +3,9 @@ import datetime
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = { 'chicago': 'data/chicago.csv',
+              'new york city': 'data/new_york_city.csv',
+              'washington': 'data/washington.csv' }
 #create a list for months filter
 months = ['january','february','march','april','may','june','all']
 #create a list for day of the week filter
@@ -171,12 +171,11 @@ def user_stats(df):
 
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df:
-        earliest_yr = df['Birth Year'].min()
-        recent_yr = df['Birth Year'].max()
-        common_yr = df['Birth Year'].mode()[0]
-        print('\nThe earliest birth year is:', earliest_yr)
-        print('The most recent birth year is:', recent_yr)
-        print('The most common birth year is:', common_yr)
+        earliest_yr = int(df['Birth Year'].min())
+        recent_yr = int(df['Birth Year'].max())
+        common_yr = int(df['Birth Year'].mode()[0])
+        #compressed print statement into one
+        print('\nThe earliest birth year is: {}. \nThe most recent birth year is: {}. \nThe most common birth year is: {}.'.format(earliest_yr, recent_yr, common_yr))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
